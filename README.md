@@ -1,4 +1,4 @@
-# 🏷️ AI-Driven Hashtag Suggestion System
+#  AI-Driven Hashtag Suggestion System
 
 An intelligent machine learning system that automatically suggests relevant hashtags for tweets/social media posts using Natural Language Processing (NLP) and classification algorithms.
 
@@ -6,7 +6,7 @@ An intelligent machine learning system that automatically suggests relevant hash
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -19,38 +19,38 @@ An intelligent machine learning system that automatically suggests relevant hash
 - [API Reference](#api-reference)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+##  Overview
 
-This project uses machine learning to analyze tweet text and predict the most appropriate hashtag category. It's trained on 10,000+ diverse samples across 20 different categories, making it suitable for real-world social media content classification.
+This project uses machine learning to analyze tweet text and predict the most appropriate hashtag category. It's trained on 20,000+ diverse samples across 20 different categories, making it suitable for real-world social media content classification.
 
-## ✨ Features
+##  Features
 
-- **🎯 High Accuracy**: ~99% accuracy with cross-validated results
-- **📊 20 Categories**: Covers business, technology, sports, entertainment, and more
-- **🔄 Cross-Validation**: 5-fold stratified cross-validation for reliable metrics
-- **📈 Confusion Matrix**: Visual representation of model performance
-- **🎨 Top-N Predictions**: Get multiple hashtag suggestions with confidence scores
-- **🛡️ Error Handling**: Robust error handling throughout the codebase
-- **📝 Clean Code**: Well-documented, modular, and maintainable code
+-  High Accuracy: ~75% accuracy on real world tweets with cross validated results
+-  20 Categories: Covers business, technology, sports, entertainment, and more
+-  Cross-Validation: 5-fold stratified cross-validation for reliable metrics
+-  Confusion Matrix: Visual representation of model performance
+-  Top-N Predictions: Get multiple hashtag suggestions with confidence scores
+-  Error Handling: Robust error handling throughout the codebase
+-  Clean Code: Well-documented, modular, and maintainable code
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AI-Driven-Hashtag-Suggestion-System/
-├── 📄 README.md                 # Project documentation
-├── 📄 requirements.txt          # Python dependencies with versions
-├── 📂 data/
-│   └── 📊 ai_hashtag_suggestion_dataset_10k.csv  # Training dataset
-├── 📂 results/
-│   ├── 🤖 hashtag_model.pkl     # Trained model
-│   ├── 📝 metrics.txt           # Evaluation metrics
-│   └── 📊 confusion_matrix.png  # Confusion matrix visualization
-└── 📂 src/
-    ├── 🎓 train_model.py        # Model training script
-    └── 🔮 predict.py            # Prediction/inference script
+├──  README.md                 # Project documentation
+├──  requirements.txt          # Python dependencies with versions
+├──  data/
+│   └──  ai_hashtag_suggestion_dataset_10k.csv  # Training dataset
+├──  results/
+│   ├──  hashtag_model.pkl     # Trained model
+│   ├──  metrics.txt           # Evaluation metrics
+│   └──  confusion_matrix.png  # Confusion matrix visualization
+└──  src/
+    ├──  train_model.py        # Model training script
+    └──  predict.py            # Prediction/inference script
 ```
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -81,7 +81,7 @@ AI-Driven-Hashtag-Suggestion-System/
    pip install -r requirements.txt
    ```
 
-## 💻 Usage
+##  Usage
 
 ### Training the Model
 
@@ -109,16 +109,16 @@ python src/predict.py
 Example session:
 ```
 ==================================================
-🏷️  AI HASHTAG SUGGESTION SYSTEM
+  AI HASHTAG SUGGESTION SYSTEM
 ==================================================
 Enter a tweet to get hashtag suggestions.
 Type 'quit' or 'exit' to stop.
 
-✅ Model loaded successfully!
+ Model loaded successfully!
 
-📝 Enter tweet: Just finished an amazing workout at the gym!
+ Enter tweet: Just finished an amazing workout at the gym!
 
-🏷️  Suggested Hashtags:
+  Suggested Hashtags:
 ------------------------------
    1. #health 🟢 (67.3%)
    2. #motivation 🟡 (18.2%)
@@ -141,20 +141,32 @@ for tag, confidence in top_hashtags:
     print(f"#{tag}: {confidence*100:.1f}%")
 ```
 
-## 📊 Model Performance
+##  Model Performance
 
 | Metric | Score |
 |--------|-------|
-| **Cross-Validation Accuracy** | 98.9% (±0.5%) |
-| **Test Set Accuracy** | 98.9% |
-| **Weighted F1-Score** | 98.9% |
-| **Macro F1-Score** | 98.9% |
+| **Cross-Validation Accuracy** | 74.76% (±0.79%) |
+| **Test Set Accuracy** | 75.38% |
+| **Weighted F1-Score** | 75.72% |
+| **Macro F1-Score** | 76.31% |
+
+
+### Per-Category Performance (Top 5)
+
+| Category | Precision | Recall | F1-Score |
+|----------|-----------|--------|----------|
+| food | 0.89 | 0.83 | 0.86 |
+| fashion | 0.87 | 0.78 | 0.82 |
+| science | 0.87 | 0.78 | 0.82 |
+| environment | 0.86 | 0.77 | 0.81 |
+| health | 0.85 | 0.81 | 0.83 |
+
 
 ### Confusion Matrix
 
 The confusion matrix visualization is automatically generated during training and saved to `results/confusion_matrix.png`.
 
-## 🏷️ Categories
+##  Categories
 
 The model classifies tweets into 20 categories:
 
@@ -181,7 +193,7 @@ The model classifies tweets into 20 categories:
 | `technology` | Tech, gadgets, software |
 | `travel` | Tourism, destinations, adventures |
 
-## 🔧 How It Works
+##  How It Works
 
 ### Text Preprocessing
 
@@ -209,7 +221,7 @@ Tweet Text → TF-IDF Vectorization → Logistic Regression → Hashtag Predicti
 6. Generate confusion matrix
 7. Save model and metrics
 
-## 📚 API Reference
+##  API Reference
 
 ### `suggest_hashtag(tweet, return_probabilities=False)`
 
@@ -234,7 +246,7 @@ Get top N hashtag suggestions with confidence scores.
 **Returns:**
 - `list`: List of tuples (hashtag, probability)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -244,11 +256,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - scikit-learn team for the excellent ML library
 - The open-source community for inspiration and tools

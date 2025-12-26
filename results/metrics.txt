@@ -5,56 +5,56 @@ MODEL EVALUATION METRICS
 
 DATASET INFO:
 ----------------------------------------
-Total samples: 10218
-Training samples: 8174
-Test samples: 2044
+Total samples: 20554
+Training samples: 16443
+Test samples: 4111
 Categories: 20
 
 CROSS-VALIDATION (5-Fold):
 ----------------------------------------
-Scores: [0.9976 0.9957 0.9957 0.9914 0.9865]
-Mean Accuracy: 0.9934 (+/- 0.0079)
+Scores: [0.7425 0.7543 0.7489 0.7457 0.7467]
+Mean Accuracy: 0.7476 (+/- 0.0079)
 
 TEST SET METRICS:
 ----------------------------------------
-Accuracy: 0.9951 (99.51%)
+Accuracy: 0.7538 (75.38%)
 
 WEIGHTED AVERAGES (accounts for class frequency):
-  Precision: 0.9952
-  Recall:    0.9951
-  F1-Score:  0.9951
+  Precision: 0.7679
+  Recall:    0.7538
+  F1-Score:  0.7572
 
 MACRO AVERAGES (treats all classes equally):
-  Precision: 0.9952
-  Recall:    0.9951
-  F1-Score:  0.9952
+  Precision: 0.7799
+  Recall:    0.7529
+  F1-Score:  0.7631
 
 ============================================================
 PER-CLASS PERFORMANCE:
 ============================================================
                precision    recall  f1-score   support
 
-     business       1.00      0.99      1.00       106
-      culture       0.98      0.98      0.98       104
-   daily_life       1.00      1.00      1.00       102
-    education       1.00      1.00      1.00       103
-entertainment       1.00      0.98      0.99       103
-  environment       1.00      1.00      1.00       103
-       events       1.00      0.98      0.99       101
-      fashion       1.00      1.00      1.00       100
-         food       1.00      1.00      1.00       100
-       gaming       1.00      1.00      1.00       101
-       health       1.00      1.00      1.00       103
-   motivation       1.00      1.00      1.00       100
-        music       0.98      1.00      0.99       100
-         news       1.00      0.99      1.00       103
-     politics       1.00      1.00      1.00       103
-      science       0.98      1.00      0.99       103
-socialjustice       0.99      0.98      0.99       103
-       sports       1.00      1.00      1.00       100
-   technology       0.97      1.00      0.99       106
-       travel       1.00      1.00      1.00       100
+     business       0.76      0.67      0.71       195
+      culture       0.78      0.68      0.73       189
+   daily_life       0.79      0.78      0.79       189
+    education       0.79      0.68      0.73       194
+entertainment       0.70      0.72      0.71       240
+  environment       0.86      0.77      0.81       188
+       events       0.84      0.81      0.83       194
+      fashion       0.87      0.78      0.82       189
+         food       0.89      0.83      0.86       185
+       gaming       0.82      0.69      0.75       186
+       health       0.85      0.81      0.83       191
+   motivation       0.77      0.79      0.78       205
+        music       0.80      0.72      0.76       187
+         news       0.52      0.74      0.61       276
+     politics       0.78      0.70      0.74       188
+      science       0.87      0.78      0.82       190
+socialjustice       0.79      0.75      0.77       192
+       sports       0.64      0.80      0.71       274
+   technology       0.66      0.79      0.72       268
+       travel       0.83      0.77      0.80       191
 
-     accuracy                           1.00      2044
-    macro avg       1.00      1.00      1.00      2044
- weighted avg       1.00      1.00      1.00      2044
+     accuracy                           0.75      4111
+    macro avg       0.78      0.75      0.76      4111
+ weighted avg       0.77      0.75      0.76      4111
