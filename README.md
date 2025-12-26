@@ -1,4 +1,4 @@
-#  AI-Driven Hashtag Suggestion System
+# 🏷️ AI-Driven Hashtag Suggestion System
 
 An intelligent machine learning system that automatically suggests relevant hashtags for tweets/social media posts using Natural Language Processing (NLP) and classification algorithms.
 
@@ -6,51 +6,53 @@ An intelligent machine learning system that automatically suggests relevant hash
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-##  Table of Contents
+## 📑 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model Performance](#model-performance)
-- [Categories](#categories)
-- [How It Works](#how-it-works)
-- [API Reference](#api-reference)
-- [Contributing](#contributing)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Model Performance](#-model-performance)
+- [Categories](#-categories)
+- [How It Works](#-how-it-works)
+- [API Reference](#-api-reference)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-##  Overview
+## 📖 Overview
 
-This project uses machine learning to analyze tweet text and predict the most appropriate hashtag category. It's trained on 20,000+ diverse samples across 20 different categories, making it suitable for real-world social media content classification.
+This project uses machine learning to analyze tweet text and predict the most appropriate hashtag category. It's trained on **20,000+ diverse samples** across **20 different categories**, making it suitable for real-world social media content classification.
 
-##  Features
+## ✨ Features
 
--  High Accuracy: ~75% accuracy on real world tweets with cross validated results
--  20 Categories: Covers business, technology, sports, entertainment, and more
--  Cross-Validation: 5-fold stratified cross-validation for reliable metrics
--  Confusion Matrix: Visual representation of model performance
--  Top-N Predictions: Get multiple hashtag suggestions with confidence scores
--  Error Handling: Robust error handling throughout the codebase
--  Clean Code: Well-documented, modular, and maintainable code
+- 🎯 **High Accuracy**: ~75% accuracy on real-world tweets with cross-validated results
+- 📂 **20 Categories**: Covers business, technology, sports, entertainment, and more
+- 🔄 **Cross-Validation**: 5-fold stratified cross-validation for reliable metrics
+- 📊 **Confusion Matrix**: Visual representation of model performance
+- 🔝 **Top-N Predictions**: Get multiple hashtag suggestions with confidence scores
+- 🛡️ **Error Handling**: Robust error handling throughout the codebase
+- 📝 **Clean Code**: Well-documented, modular, and maintainable code
 
-##  Project Structure
+## 📁 Project Structure
 
 ```
 AI-Driven-Hashtag-Suggestion-System/
-├──  README.md                 # Project documentation
-├──  requirements.txt          # Python dependencies with versions
-├──  data/
-│   └──  ai_hashtag_suggestion_dataset_10k.csv  # Training dataset
-├──  results/
-│   ├──  hashtag_model.pkl     # Trained model
-│   ├──  metrics.txt           # Evaluation metrics
-│   └──  confusion_matrix.png  # Confusion matrix visualization
-└──  src/
-    ├──  train_model.py        # Model training script
-    └──  predict.py            # Prediction/inference script
+├── LICENSE                              # MIT License
+├── README.md                            # Project documentation
+├── requirements.txt                     # Python dependencies
+├── data/
+│   └── ai_hashtag_suggestion_dataset_10k.csv   # Training dataset (20k+ samples)
+├── results/
+│   ├── hashtag_model.pkl                # Trained model (generated)
+│   ├── metrics.txt                      # Evaluation metrics (generated)
+│   └── confusion_matrix.png             # Confusion matrix visualization (generated)
+└── src/
+    ├── train_model.py                   # Model training script
+    └── predict.py                       # Prediction/inference script
 ```
 
-##  Installation
+## 🚀 Installation
 
 ### Prerequisites
 
@@ -68,7 +70,10 @@ AI-Driven-Hashtag-Suggestion-System/
 2. **Create a virtual environment** (recommended)
    ```bash
    python -m venv .venv
+   ```
    
+   **Activate the virtual environment:**
+   ```bash
    # Windows
    .venv\Scripts\activate
    
@@ -81,7 +86,18 @@ AI-Driven-Hashtag-Suggestion-System/
    pip install -r requirements.txt
    ```
 
-##  Usage
+### Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|----------|
+| pandas | 2.3.3 | Data manipulation |
+| scikit-learn | 1.8.0 | Machine learning |
+| numpy | 2.4.0 | Numerical computing |
+| joblib | 1.5.3 | Model serialization |
+| matplotlib | 3.10.8 | Visualization |
+| seaborn | 0.13.2 | Statistical plots |
+
+## 💻 Usage
 
 ### Training the Model
 
@@ -92,9 +108,9 @@ python src/train_model.py
 ```
 
 **Output:**
-- Trained model saved to `results/hashtag_model.pkl`
-- Metrics saved to `results/metrics.txt`
-- Confusion matrix saved to `results/confusion_matrix.png`
+- ✅ Trained model saved to `results/hashtag_model.pkl`
+- 📊 Metrics saved to `results/metrics.txt`
+- 🖼️ Confusion matrix saved to `results/confusion_matrix.png`
 
 ### Making Predictions
 
@@ -141,7 +157,7 @@ for tag, confidence in top_hashtags:
     print(f"#{tag}: {confidence*100:.1f}%")
 ```
 
-##  Model Performance
+## 📈 Model Performance
 
 | Metric | Score |
 |--------|-------|
@@ -166,7 +182,7 @@ for tag, confidence in top_hashtags:
 
 The confusion matrix visualization is automatically generated during training and saved to `results/confusion_matrix.png`.
 
-##  Categories
+## 🏷️ Categories
 
 The model classifies tweets into 20 categories:
 
@@ -193,7 +209,7 @@ The model classifies tweets into 20 categories:
 | `technology` | Tech, gadgets, software |
 | `travel` | Tourism, destinations, adventures |
 
-##  How It Works
+## ⚙️ How It Works
 
 ### Text Preprocessing
 
@@ -221,7 +237,7 @@ Tweet Text → TF-IDF Vectorization → Logistic Regression → Hashtag Predicti
 6. Generate confusion matrix
 7. Save model and metrics
 
-##  API Reference
+## 📚 API Reference
 
 ### `suggest_hashtag(tweet, return_probabilities=False)`
 
@@ -246,7 +262,7 @@ Get top N hashtag suggestions with confidence scores.
 **Returns:**
 - `list`: List of tuples (hashtag, probability)
 
-##  Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -256,17 +272,21 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-##  License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-##  Acknowledgments
+## 🙏 Acknowledgments
 
-- scikit-learn team for the excellent ML library
+- [scikit-learn](https://scikit-learn.org/) team for the excellent ML library
+- [pandas](https://pandas.pydata.org/) for data manipulation capabilities
 - The open-source community for inspiration and tools
 
 ---
 
 <p align="center">
   Made with ❤️ for social media automation
+</p>
+<p align="center">
+  <a href="#-ai-driven-hashtag-suggestion-system">⬆️ Back to Top</a>
 </p>
